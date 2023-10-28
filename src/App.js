@@ -7,6 +7,7 @@ import HeroSection from './components/heroSection';
 import Mine from './components/mine';
 import Chain from './components/chain';
 import Transaction from './components/transaction';
+import Footer from './components/footer';
 
 const Body = styled.div`
    background-color: ${({ theme }) => theme.card_light};
@@ -35,8 +36,12 @@ function App() {
     <Mine/>
     <Chain/>
     <Transaction/>
+    <Footer/>
+
     </Body>
   </Router>
+  <Footer/>
+
   </ThemeProvider>
 
   );
