@@ -7,15 +7,15 @@ import {
   ChainLeftContainer,
   ChainRightContainer,
 } from "./chainStyledComponents";
+import { Bio } from "../../data/constants";
 const Chain = () => {
   return (
     <div id="chain">
       <ChainContainer>
         <ChainInnerContainer>
           <ChainLeftContainer>
-            <Title>Kazılmış Bloklar</Title>
-            <Span>
-              Şu ana kadar kazılmış tüm blokları görüntüleyebilirsiniz.{" "}
+            <Title>{Bio.chainTitle}</Title>
+            <Span>{Bio.chainSubTitle}
             </Span>
           </ChainLeftContainer>
         </ChainInnerContainer>

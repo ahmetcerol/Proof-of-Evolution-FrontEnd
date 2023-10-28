@@ -8,15 +8,16 @@ import {
   DropBox,
   MineRightContainer,
 } from "./mineStyledComponent";
+
+import { Bio } from "../../data/constants";
 const Mine = () => {
   return (
     <div id="mine">
       <MineContainer>
         <MineInnerContainer>
           <MineLeftContainer>
-            <Title>Madencilik İşlemleri</Title>
-            <Span>
-              Hangi methodu kullanarak madencilik yapmak istersiniz ?{" "}
+            <Title>{Bio.mineTitle}</Title>
+            <Span> {Bio.mineSubTitle}
             </Span>
             <DropBox>
               <option value={"Proof of Work"}>Proof of Work</option>

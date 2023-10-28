@@ -7,6 +7,7 @@ import {
   HeroLeftContainer,
   HeroRightContainer,
 } from "./heroSectionStyledComponent";
+import { Bio } from "../../data/constants";
 
 const HeroSection = () => {
   return (
@@ -14,15 +15,9 @@ const HeroSection = () => {
       <HeroContainer>
         <HeroInnerContainer>
           <HeroLeftContainer>
-            <Title>Merhabalar, PoE</Title>
-            <Span>
-              <b>&nbsp;</b>Geleneksel Proof of Work (PoW) protokolünün güvenlik
-              özelliklerini korurken, madencilik işlemlerinin bir kısmını
-              Evrimsel algoritmaların işlenmesi için kullanma amacını taşır. Bu
-              yaklaşım, enerji tüketimini azaltarak PoW'un sürdürülebilirliğini
-              artırma potansiyeli taşır. PoE, güvenlik, enerji verimliliği
-              sağlama amacı taşıyan yeni bir blockchain konsensüs protokolünün
-              temelini oluşturuyor.
+            <Title>{Bio.name}</Title>
+            <Span>  <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+    {Bio.description}
             </Span>
           </HeroLeftContainer>
           <HeroRightContainer></HeroRightContainer>

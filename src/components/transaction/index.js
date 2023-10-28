@@ -9,15 +9,15 @@ import {
   InputText,
   TransactionRightContainer,
 } from "./transactionStyledComponents";
+import { Bio } from "../../data/constants";
 const Transaction = () => {
   return (
     <div id="transaction">
       <TransactionContainer>
         <TransactionInnerContainer>
           <TransactionLeftContainer>
-            <Title>Aktarma İşlemleri</Title>
-            <Span>
-              Bakiyenizi aktarmak istediğin index numarasını giriniz :{" "}
+            <Title>{Bio.transactionTitle}</Title>
+            <Span>{Bio.transactionSubTitle}
             </Span>
             <InputText placeholder="Index Numarası" />
             <Button>Aktar !</Button>
