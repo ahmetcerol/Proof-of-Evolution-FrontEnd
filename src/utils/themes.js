@@ -7,7 +7,7 @@ export const LightTheme = {
     text_primary: "#001d6d",  // Slightly lighter secondary text
     card: "#e0e0e0",         // Light gray card background
     card_light: "#251451",   // Slightly lighter card background
-    button: "#2E7D32",       // Green button color for actions
+    button: "#004bfa",       // Green button color for actions
     white: "#FFFFFF",        // Pure white
     black: "#000000",        // Pure black
   }

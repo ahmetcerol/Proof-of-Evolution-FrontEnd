@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MineContainer = styled.div`
+export const ChainContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,12 +19,12 @@ export const MineContainer = styled.div`
   }
 `;
 
-export const MineLeftContainer = styled.div`
+export const ChainLeftContainer = styled.div`
   width: 100%;
   order: 1;
 `;
 
-export const MineRightContainer = styled.div`
+export const ChainRightContainer = styled.div`
   width: 100%;
   display: flex;
   order: 2;
@@ -55,7 +55,7 @@ export const DropBox = styled.select`
 `;
 
 
-export const MineInnerContainer = styled.div`
+export const ChainInnerContainer = styled.div`
   position: relative;
   display: flex;
   justify-content: space-between;

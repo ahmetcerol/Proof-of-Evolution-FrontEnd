@@ -5,6 +5,8 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { LightTheme } from './utils/themes';
 import HeroSection from './components/heroSection';
 import Mine from './components/mine';
+import Chain from './components/chain';
+import Transaction from './components/transaction';
 
 const Body = styled.div`
    background-color: ${({ theme }) => theme.card_light};
@@ -31,6 +33,8 @@ function App() {
   <Body>
     <HeroSection/>
     <Mine/>
+    <Chain/>
+    <Transaction/>
     </Body>
   </Router>
   </ThemeProvider>

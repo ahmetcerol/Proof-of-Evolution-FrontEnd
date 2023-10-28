@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MineContainer = styled.div`
+export const TransactionContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,12 +19,12 @@ export const MineContainer = styled.div`
   }
 `;
 
-export const MineLeftContainer = styled.div`
+export const TransactionLeftContainer = styled.div`
   width: 100%;
   order: 1;
 `;
 
-export const MineRightContainer = styled.div`
+export const TransactionRightContainer = styled.div`
   width: 100%;
   display: flex;
   order: 2;
@@ -32,19 +32,17 @@ export const MineRightContainer = styled.div`
   gap: 12px;
 `;
 
-export const DropBox = styled.select`
-  height: auto;
-  margin-top:35px;
-  padding: 12px 16px; 
-  margin-left:25px;
+export const InputText = styled.input`
+  margin-top: 35px;
   border-radius: 8px;
   border-color: #f9f9f9;
   letter-spacing: 1.5px;
   text-align: center;
-  font-size: 16px; 
-  background-color: #f9f9f9; 
-  border: 1px solid #ccc; 
-  color: #333; 
+  padding: 12px 16px; /* Add padding for better spacing */
+  font-size: 16px; /* Increase font size for better readability */
+  background-color: #f9f9f9; /* Add a light background color */
+  border: 1px solid #ccc; /* Add a light border */
+  color: #333; /* Set text color */
   transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add transitions */
 
   &:focus {
@@ -54,8 +52,26 @@ export const DropBox = styled.select`
   }
 `;
 
+export const Button = styled.button`
+  font-weight: bold;
+  color: #f9f9f9;
+  background-color: ${({ theme }) => theme.button};
+  letter-spacing: 2px;
+  font-size: 14px;
+  margin-left: 25px;
+  padding: 10px 20px; 
+  border: 1px solid transparent;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+ user-select: none;
+ 
+  &:hover {
+    background-color: #3d78c4;
+  }
+`;
 
-export const MineInnerContainer = styled.div`
+export const TransactionInnerContainer = styled.div`
   position: relative;
   display: flex;
   justify-content: space-between;
