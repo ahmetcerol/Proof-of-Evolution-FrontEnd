@@ -1,14 +1,12 @@
-import styled from 'styled-components';
-
+import styled from "styled-components";
 
 const FooterContainer = styled.div`
   width: 100%;
-  z-index:10;
+  z-index: 10;
   padding: 2rem 0;
   display: flex;
   justify-content: center;
 `;
-
 
 const FooterWrapper = styled.footer`
   width: 100%;
@@ -27,10 +25,6 @@ const Logo = styled.h1`
   color: ${({ theme }) => theme.white};
 `;
 
-
-
-
-
 const Copyright = styled.p`
   margin-top: 1.5rem;
   font-size: 0.9rem;
@@ -43,10 +37,7 @@ function Footer() {
     <FooterContainer>
       <FooterWrapper>
         <Logo>Proof of Evoulation </Logo>
-        <Copyright>
-          &copy; 2023 Ahmet Can EROL. All rights reserved.
-        </Copyright>
-
+        <Copyright>&copy; 2023 Ahmet Can EROL. All rights reserved.</Copyright>
       </FooterWrapper>
     </FooterContainer>
   );

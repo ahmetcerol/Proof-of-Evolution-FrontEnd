@@ -6,7 +6,7 @@ export const TransactionContainer = styled.div`
   align-items: center;
   position: relative;
   z-index: 1;
-  height:100vh;
+  height: 100vh;
   overflow: hidden;
   &:after {
     content: "";
@@ -15,7 +15,11 @@ export const TransactionContainer = styled.div`
     left: 0;
     width: 100%;
     height: 100px; /* Sayfa sonuna geçiş efekti yüksekliği */
-    background: linear-gradient(to bottom, transparent, ${({ theme }) => theme.card_light}); /* Geçiş efekti rengi */
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      ${({ theme }) => theme.card_light}
+    ); /* Geçiş efekti rengi */
   }
 `;
 
@@ -59,13 +63,13 @@ export const Button = styled.button`
   letter-spacing: 2px;
   font-size: 14px;
   margin-left: 25px;
-  padding: 10px 20px; 
+  padding: 10px 20px;
   border: 1px solid transparent;
   border-radius: 8px;
   text-align: center;
   cursor: pointer;
- user-select: none;
- 
+  user-select: none;
+
   &:hover {
     background-color: #3d78c4;
   }
@@ -80,8 +84,8 @@ export const TransactionInnerContainer = styled.div`
   max-width: 1100px;
 `;
 export const Title = styled.div`
-   font-size: 40px;
-   font-weight: 700;
+  font-size: 40px;
+  font-weight: 700;
   line-height: 32px;
   margin-bottom: 42px;
   white-space: pre-line;
