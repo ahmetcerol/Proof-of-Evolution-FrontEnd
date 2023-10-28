@@ -13,13 +13,12 @@ const Header = () => {
     <Nav>
       <NavbarContainer>
         <NavLogo to="/">
-        
-            <img
-              src="images/mining.png"
-              alt="Logo"
-              style={{ width: "3rem", height: "3rem", marginRight: "10px" }}
-            />
-            <Span >Proof of Evoulation</Span>
+          <img
+            src="images/mining.png"
+            alt="Logo"
+            style={{ width: "3rem", height: "3rem", marginRight: "10px" }}
+          />
+          <Span>Proof of Evoulation</Span>
         </NavLogo>
         <NavItems>
           <NavLink href="#about">About</NavLink>

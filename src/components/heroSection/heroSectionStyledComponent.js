@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const HeroContainer = styled.div`
-  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +15,11 @@ export const HeroContainer = styled.div`
     left: 0;
     width: 100%;
     height: 100px; /* Sayfa sonuna geçiş efekti yüksekliği */
-    background: linear-gradient(to bottom, transparent, ${({ theme }) => theme.card_light}); /* Geçiş efekti rengi */
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      ${({ theme }) => theme.card_light}
+    ); /* Geçiş efekti rengi */
   }
 `;
 

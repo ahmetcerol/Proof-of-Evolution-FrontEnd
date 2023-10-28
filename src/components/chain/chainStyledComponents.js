@@ -6,7 +6,7 @@ export const ChainContainer = styled.div`
   align-items: center;
   position: relative;
   z-index: 1;
-  height:100vh;
+  height: 100vh;
   overflow: hidden;
   &:after {
     content: "";
@@ -15,7 +15,11 @@ export const ChainContainer = styled.div`
     left: 0;
     width: 100%;
     height: 100px; /* Sayfa sonuna geçiş efekti yüksekliği */
-    background: linear-gradient(to bottom, transparent, ${({ theme }) => theme.card_light}); /* Geçiş efekti rengi */
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      ${({ theme }) => theme.card_light}
+    ); /* Geçiş efekti rengi */
   }
 `;
 
@@ -34,17 +38,17 @@ export const ChainRightContainer = styled.div`
 
 export const DropBox = styled.select`
   height: auto;
-  margin-top:35px;
-  padding: 12px 16px; 
-  margin-left:25px;
+  margin-top: 35px;
+  padding: 12px 16px;
+  margin-left: 25px;
   border-radius: 8px;
   border-color: #f9f9f9;
   letter-spacing: 1.5px;
   text-align: center;
-  font-size: 16px; 
-  background-color: #f9f9f9; 
-  border: 1px solid #ccc; 
-  color: #333; 
+  font-size: 16px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  color: #333;
   transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add transitions */
 
   &:focus {
@@ -53,7 +57,6 @@ export const DropBox = styled.select`
     box-shadow: 0 0 4px rgba(9, 3, 130, 0.5); /* Add a subtle box shadow on focus */
   }
 `;
-
 
 export const ChainInnerContainer = styled.div`
   position: relative;
@@ -64,8 +67,8 @@ export const ChainInnerContainer = styled.div`
   max-width: 1100px;
 `;
 export const Title = styled.div`
-   font-size: 40px;
-   font-weight: 700;
+  font-size: 40px;
+  font-weight: 700;
   line-height: 32px;
   margin-bottom: 42px;
   white-space: pre-line;

@@ -1,16 +1,16 @@
-import './App.css';
-import styled, { ThemeProvider } from 'styled-components';
-import Header from './components/header';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { LightTheme } from './utils/themes';
-import HeroSection from './components/heroSection';
-import Mine from './components/mine';
-import Chain from './components/chain';
-import Transaction from './components/transaction';
-import Footer from './components/footer';
+import "./App.css";
+import styled, { ThemeProvider } from "styled-components";
+import Header from "./components/header";
+import { BrowserRouter as Router } from "react-router-dom";
+import { LightTheme } from "./utils/themes";
+import HeroSection from "./components/heroSection";
+import Mine from "./components/mine";
+import Chain from "./components/chain";
+import Transaction from "./components/transaction";
+import Footer from "./components/footer";
 
 const Body = styled.div`
-   background-color: ${({ theme }) => theme.card_light};
+  background-color: ${({ theme }) => theme.card_light};
   background-image: url("/images/blockchainbackground.png");
   background-size: cover;
   background-position: center;
@@ -18,36 +18,29 @@ const Body = styled.div`
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-`
+`;
 const Wrapper = styled.div`
   width: 100%;
-  clip-path: polygon(0 0, 100% 0, 100% 100%,30% 98%, 0 100%);
-`
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%);
+`;
 
 function App() {
   return (
     <ThemeProvider theme={LightTheme}>
+      <Router>
+        <Header />
 
-  <Router>
-  <Header/>
-
-  <Body>
-    <HeroSection/>
-    <Mine/>
-    <Chain/>
-    <Transaction/>
-    <Footer/>
-
-    </Body>
-  </Router>
-  <Footer/>
-
-  </ThemeProvider>
-
+        <Body>
+          <HeroSection />
+          <Mine />
+          <Chain />
+          <Transaction />
+          <Footer />
+        </Body>
+      </Router>
+      <Footer />
+    </ThemeProvider>
   );
-    
-  
-  
 }
 
 export default App;
