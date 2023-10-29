@@ -34,10 +34,13 @@ export const TransactionRightContainer = styled.div`
   order: 2;
   justify-content: end;
   gap: 12px;
+  margin-left:20px;
+
 `;
 
 export const InputText = styled.input`
   margin-top: 35px;
+  margin-right: 35px;
   border-radius: 8px;
   border-color: #f9f9f9;
   letter-spacing: 1.5px;
@@ -98,4 +101,18 @@ export const Span = styled.div`
   margin-bottom: 42px;
   white-space: pre-line;
   color: ${({ theme }) => theme.white + 95};
+`;
+
+export const TransactionDataContainer = styled.div`
+  width: 50%; /* Sayfanın yüzde 60'ını kaplaması için */
+  position: absolute;
+  top: 0;
+  
+  height: 60vh; /* Sayfanın yüzde 75'ini kaplaması için */
+  background-color: #ffffff; /* Beyaz arka plan */
+  border-radius: 30px; /* Köşeleri oval yapmak için uygun bir değer */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2; /* Özellikle üstte olması gerekiyorsa */
 `;

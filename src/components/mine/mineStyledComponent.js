@@ -36,6 +36,30 @@ export const MineRightContainer = styled.div`
   gap: 12px;
 `;
 
+
+
+export const MineDataContainer = styled.div`
+  width: 50%; /* Sayfanın yüzde 60'ını kaplaması için */
+  position: absolute;
+  margin-left:50px;
+  top: 0;
+  
+  height: 60vh; /* Sayfanın yüzde 75'ini kaplaması için */
+  background-color: #ffffff; /* Beyaz arka plan */
+  border-radius: 30px; /* Köşeleri oval yapmak için uygun bir değer */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2; /* Özellikle üstte olması gerekiyorsa */
+`;
+
+export const MineDataPre = styled.pre `
+width: 70%;
+font-size: 11px;
+margin-right: 75px;
+`;
+
+
 export const DropBox = styled.select`
   height: auto;
   margin-top: 35px;
@@ -81,4 +105,24 @@ export const Span = styled.div`
   margin-bottom: 42px;
   white-space: pre-line;
   color: ${({ theme }) => theme.white + 95};
+`;
+
+
+export const Button = styled.button`
+  font-weight: bold;
+  color: #f9f9f9;
+  background-color: ${({ theme }) => theme.button};
+  letter-spacing: 2px;
+  font-size: 14px;
+  margin-left: 25px;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    background-color: #3d78c4;
+  }
 `;

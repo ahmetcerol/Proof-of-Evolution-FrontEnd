@@ -5,7 +5,7 @@ export const Bio = {
    mineTitle: "Madencilik İşlemleri",
    mineSubTitle: "Hangi methodu kullanarak madencilik yapmak istersiniz ?",
    transactionTitle:"Aktarma İşlemleri",
-   transactionSubTitle:"Bakiyenizi aktarmak istediğin index numarasını giriniz :",
+   transactionSubTitle:"Bakiyenizi aktarmak istediğin kişiye dair bilgileri giriniz.",
    chainTitle:"Kazılmış Bloklar",
    chainSubTitle:"Şu ana kadar kazılmış tüm blokları görüntüleyebilirsiniz."
   };

@@ -27,35 +27,35 @@ export const ChainLeftContainer = styled.div`
   width: 100%;
   order: 1;
 `;
-
 export const ChainRightContainer = styled.div`
   width: 100%;
   display: flex;
   order: 2;
   justify-content: end;
   gap: 12px;
+  margin-left: 10px;
+`;
+export const ChainDataPre = styled.pre`
+  width:70%;
+  max-height: 100vh;
+  font-size: 10px;
+  margin-right: 75px;
+  margin-top: 100px;
 `;
 
-export const DropBox = styled.select`
-  height: auto;
-  margin-top: 35px;
-  padding: 12px 16px;
-  margin-left: 25px;
-  border-radius: 8px;
-  border-color: #f9f9f9;
-  letter-spacing: 1.5px;
-  text-align: center;
-  font-size: 16px;
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
-  color: #333;
-  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add transitions */
-
-  &:focus {
-    outline: none;
-    border-color: #090382; /* Change border color on focus */
-    box-shadow: 0 0 4px rgba(9, 3, 130, 0.5); /* Add a subtle box shadow on focus */
-  }
+export const ChainDataContainer = styled.div`
+  width: 50%;
+  position: absolute;
+  top: 0;
+  max-height: 100vh; /* Sayfanın yüzde 75'ini kaplaması için */
+  background-color: #ffffff;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column; /* İçeriği sıralı bir sütun olarak görüntüler */
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  overflow: auto; /* Dikey kaydırma çubuğunu etkinleştirir */
 `;
 
 export const ChainInnerContainer = styled.div`
