@@ -9,7 +9,7 @@ import {
   MineLeftContainer,
   DropBox,
   MineRightContainer,
-  MineDataPre
+  MineDataPre,
 } from "./mineStyledComponent";
 
 import { Bio } from "../../data/constants";
@@ -23,7 +23,6 @@ const Loader = styled.div`
   height: 3.625rem;
   border-radius: 50%;
   position: relative;
-
 `;
 
 const Mine = () => {
@@ -34,11 +33,14 @@ const Mine = () => {
   const handleStartClick = () => {
     setIsLoading(true);
 
-    axios.get(`http://localhost:8080/blockchain/${selectedOption.toLowerCase()}Mine`)
-      .then(response => {
+    axios
+      .get(
+        `http://localhost:8080/blockchain/${selectedOption.toLowerCase()}Mine`
+      )
+      .then((response) => {
         setResponseData(response.data);
       })
-      .catch(error => {
+      .catch((error) => {
         console.error("API çağrısı başarısız oldu:", error);
       })
       .finally(() => {
@@ -48,38 +50,45 @@ const Mine = () => {
 
   return (
     <div id="mine">
-    <MineContainer>
-      <MineInnerContainer>
-        <MineLeftContainer>
-          <Title>{Bio.mineTitle}</Title>
-          <Span> {Bio.mineSubTitle}</Span>
-          <DropBox
-            value={selectedOption}
-            onChange={(e) => setSelectedOption(e.target.value)}
-          >
-            <option value={""}>Proof of Work</option>
-            <option value={"poe"}>Genetik Algoritma</option>
-            <option value={"aco"}>Karınca Kolonisi</option>
-            <option value={"abc"}>Yapay Arı Kolonisi</option>
-          </DropBox>
-          <Button onClick={handleStartClick}>Başlat !</Button>
-        </MineLeftContainer>
-        <MineRightContainer>
-          <MineDataContainer>
-            {isLoading ? (
+      <MineContainer>
+        <MineInnerContainer>
+          <MineLeftContainer>
+            <Title>{Bio.mineTitle}</Title>
+            <Span> {Bio.mineSubTitle}</Span>
+            <DropBox
+              value={selectedOption}
+              onChange={(e) => setSelectedOption(e.target.value)}
+            >
+              <option value={""}>Proof of Work</option>
+              <option value={"poe"}>Genetik Algoritma</option>
+              <option value={"aco"}>Karınca Kolonisi</option>
+              <option value={"abc"}>Yapay Arı Kolonisi</option>
+            </DropBox>
+            <Button onClick={handleStartClick}>Başlat !</Button>
+          </MineLeftContainer>
+          <MineRightContainer>
+            <MineDataContainer>
+              {isLoading ? (
                 <Loader>
-                  <img src="images/data-mining.gif"             style={{ width: "5rem", height: "5rem", marginRight: "20px" }}/>
-                  </Loader>
-) : (
-               <MineDataPre style={{ color: "black" }}>
-              {responseData && JSON.stringify(responseData, null, 2)}
-            </MineDataPre>
-            )}
-          </MineDataContainer>
-        </MineRightContainer>
-      </MineInnerContainer>
-    </MineContainer>
-  </div>
+                  <img
+                    src="images/data-mining.gif"
+                    style={{
+                      width: "5rem",
+                      height: "5rem",
+                      marginRight: "20px",
+                    }}
+                  />
+                </Loader>
+              ) : (
+                <MineDataPre style={{ color: "black" }}>
+                  {responseData && JSON.stringify(responseData, null, 2)}
+                </MineDataPre>
+              )}
+            </MineDataContainer>
+          </MineRightContainer>
+        </MineInnerContainer>
+      </MineContainer>
+    </div>
   );
 };
 
