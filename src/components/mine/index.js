@@ -30,6 +30,10 @@ const Mine = () => {
   const [responseData, setResponseData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
+  /*This method allows us to connect to the mining processes in 
+  our background codes via axios. Depending on the input we receive 
+  from the user, it runs whatever method we want to call in the background.
+ */
   const handleStartClick = () => {
     setIsLoading(true);
 

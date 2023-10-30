@@ -7,35 +7,37 @@ import {
   ChainLeftContainer,
   ChainRightContainer,
   ChainDataContainer,
-  ChainDataPre
+  ChainDataPre,
 } from "./chainStyledComponents";
 import { Bio } from "../../data/constants";
 import axios from "axios";
-import  { useState, useEffect } from "react";
-
+import { useState, useEffect } from "react";
 
 const Chain = () => {
   const [responseData, setResponseData] = useState(null);
 
+
+  //This method for axios connection with Spring Boot BackEnd which allowed us to see all Chain indexes
   const fetchChainData = () => {
-    axios.get("http://localhost:8080/blockchain/chain")
-      .then(response => {
+    axios
+      .get("http://localhost:8080/blockchain/chain")
+      .then((response) => {
         setResponseData(response.data);
       })
-      .catch(error => {
+      .catch((error) => {
         console.error("API çağrısı başarısız oldu:", error);
       });
   };
 
+
+  //This method allow us bring new chain every 15 seconds
   useEffect(() => {
-    // Sayfa yüklendiğinde zinciri alın
     fetchChainData();
 
-    // Her 15 saniyede bir zinciri güncelle
-    const intervalId = setInterval(fetchChainData, 1000);
+    //15 seconds
+    const intervalId = setInterval(fetchChainData, 15000);
 
     return () => {
-      // Bileşen ayrıldığında aralığı temizle
       clearInterval(intervalId);
     };
   }, []);
@@ -52,9 +54,7 @@ const Chain = () => {
             <ChainDataContainer>
               <ChainDataPre>
                 {responseData && (
-                  <pre>
-                    {JSON.stringify(responseData, null, 2)}
-                  </pre>
+                  <pre>{JSON.stringify(responseData, null, 2)}</pre>
                 )}
               </ChainDataPre>
             </ChainDataContainer>
@@ -66,4 +66,3 @@ const Chain = () => {
 };
 
 export default Chain;
-
