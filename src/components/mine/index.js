@@ -15,8 +15,16 @@ import {
 import { Bio } from "../../data/constants";
 import axios from "axios";
 import { useState } from "react";
+import styled from "styled-components";
 
+const Loader = styled.div`
+  border-width: 0.5rem;
+  width: 3.625rem;
+  height: 3.625rem;
+  border-radius: 50%;
+  position: relative;
 
+`;
 
 const Mine = () => {
   const [selectedOption, setSelectedOption] = useState("");
@@ -59,8 +67,10 @@ const Mine = () => {
         <MineRightContainer>
           <MineDataContainer>
             {isLoading ? (
-              <p>Yükleniyor...</p>
-            ) : (
+                <Loader>
+                  <img src="images/data-mining.gif"             style={{ width: "5rem", height: "5rem", marginRight: "20px" }}/>
+                  </Loader>
+) : (
                <MineDataPre style={{ color: "black" }}>
               {responseData && JSON.stringify(responseData, null, 2)}
             </MineDataPre>
